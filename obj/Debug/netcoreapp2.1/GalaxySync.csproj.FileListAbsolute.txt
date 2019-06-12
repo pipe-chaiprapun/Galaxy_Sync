@@ -1,0 +1,14 @@
+C:\DE\GalaxySync\bin\Debug\netcoreapp2.1\GalaxySync.deps.json
+C:\DE\GalaxySync\bin\Debug\netcoreapp2.1\GalaxySync.runtimeconfig.json
+C:\DE\GalaxySync\bin\Debug\netcoreapp2.1\GalaxySync.runtimeconfig.dev.json
+C:\DE\GalaxySync\bin\Debug\netcoreapp2.1\GalaxySync.dll
+C:\DE\GalaxySync\bin\Debug\netcoreapp2.1\GalaxySync.pdb
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.csprojAssemblyReference.cache
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.csproj.CoreCompileInputs.cache
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.RazorAssemblyInfo.cache
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.RazorAssemblyInfo.cs
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.AssemblyInfoInputs.cache
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.AssemblyInfo.cs
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.RazorTargetAssemblyInfo.cache
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.dll
+C:\DE\GalaxySync\obj\Debug\netcoreapp2.1\GalaxySync.pdb
