@@ -79,5 +79,65 @@ namespace GalaxySync.Services
                 }
             }
         }
+        public List<m_payment> getLoans()
+        {
+            using (OracleConnection conn = new OracleConnection(_connStr))
+            {
+                try
+                {
+                    conn.Open();
+                    using (var cmd = new OracleCommand(Constants.SqlCommand.getLoan_payment, conn) { CommandType = CommandType.Text })
+                    {
+                        var reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            List<m_payment> data = new List<m_payment>();
+                            while (reader.Read())
+                            {
+                                data.Add(new m_payment
+                                {
+                                    DOC_NO = reader["DOCNO"].ToString(),
+                                    PAY_DATE = (DateTime)reader["PAY_DATE"],
+                                    BRH_ID = reader["BRH_ID"].ToString(),
+                                    PATH_NO = reader["PATH_NO"].ToString(),
+                                    PATH_NAME = reader["PATH_NAME"].ToString(),
+                                    AREA_NO = reader["AREA_NO"].ToString(),
+                                    AREA_NAME = reader["AREA_NAME"].ToString(),
+                                    LNC_NO = reader["LNC_NO"].ToString(),
+                                    CUST_NO = Int64.Parse(reader["CUST_NO"].ToString()),
+                                    FIRST_NAME = reader["FIRSTNAME"].ToString(),
+                                    LAST_NAME = reader["LASTNAME"].ToString(),
+                                    TEL_SMS = reader["TEL_SMS"].ToString(),
+                                    MPAY_AMT = Int32.Parse(reader["MPAY_AMT"].ToString()),
+                                    PAY_AMT = Int32.Parse(reader["PAY_AMT"].ToString()),
+                                    LAST_PAY_DAY = (DateTime)reader["LAST_PAY_DATE"],
+                                    LATE_NO_DAY = Int32.Parse(reader["LATE_NO_DAY"].ToString()),
+                                    BAL = Int32.Parse(reader["BAL"].ToString())
+                                });
+                            }
+                            cmd.Dispose();
+                            reader.Dispose();
+                            return data;
+                        }
+                        else
+                        {
+                            cmd.Dispose();
+                            reader.Dispose();
+                            return null;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Error => {e.Message}");
+                    return null;
+                }
+                finally
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+        }
     }
 }

@@ -31,5 +31,12 @@ namespace GalaxySync.Controllers
         {
             return Ok(value);
         }
+
+        [HttpGet("test")]
+        public IActionResult Test()
+        {
+            var data = gts.getLoans();
+            return Ok(data);
+        }
     }
 }
